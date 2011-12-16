@@ -1,7 +1,7 @@
 ;;File:		.emacs
 ;;Author:   	Arjun Suresh
 
-;; Time-stamp: <Last changed 05-12-2011 17:10:48 by Arjun Suresh, sarjun>
+;; Time-stamp: <Last changed 16-12-2011 17:31:15 by Arjun Suresh, sarjun>
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -305,3 +305,14 @@ interpreter-mode-alist))
 		("\\.tbl$" . sql-mode)
 		("\\.sp$"  . sql-mode))
 	      auto-mode-alist))
+
+
+;;bookmark line visual studio style
+(add-to-list 'load-path "~/.emacs.d")
+(require 'bm)
+
+    (global-set-key (kbd "<C-f2>") 'bm-toggle)
+    (global-set-key (kbd "<f2>")   'bm-next)
+    (global-set-key (kbd "<S-f2>") 'bm-previous)
+
+
