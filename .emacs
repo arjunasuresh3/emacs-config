@@ -315,4 +315,9 @@ interpreter-mode-alist))
     (global-set-key (kbd "<f2>")   'bm-next)
     (global-set-key (kbd "<S-f2>") 'bm-previous)
 
+;;js-mode
+(autoload 'js2-mode "js2" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+
 
