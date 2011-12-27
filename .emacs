@@ -1,7 +1,7 @@
 ;;File:		.emacs
 ;;Author:   	Arjun Suresh
 
-;; Time-stamp: <Last changed 16-12-2011 17:31:15 by Arjun Suresh, sarjun>
+;; Time-stamp: <Last changed 27-12-2011 14:48:32 by Arjun Suresh, sarjun>
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -319,5 +319,11 @@ interpreter-mode-alist))
 (autoload 'js2-mode "js2" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
+;;hide ^M in file
+(defun remove-dos-eol ()
+  "Do not show ^M in files containing mixed UNIX and DOS line endings."
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
 
 
